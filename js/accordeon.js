@@ -1,5 +1,3 @@
-//uses classList, setAttribute, and querySelectorAll
-//if you want this to work in IE8/9 youll need to polyfill these
 (function(){
 	var d = document,
 	accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
