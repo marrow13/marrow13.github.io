@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function () {
 	jQuery.extend(jQuery.easing, {
 		easeInOutCubic: function (x, t, b, c, d) {
 			if ((t/=d/2) < 1) return c/2*t*t*t + b;
@@ -7,7 +7,7 @@ $(document).ready(function () {
 	});
 });
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
   // set up and create progress bar in DOM
   $('h2').eq(0).before('<div class="progressbar"></div>');
@@ -28,10 +28,7 @@ $(document).ready(function(){
 	});
 	var points = labels.find('i');
 	points.css('width', 100/$('h2').length+'%');
-	
-  // match height of shim
-  // stop layout jumping when progress bar fixes to / unfixes
-  // from top of viewport
+
 	function setShimHeight(){
 		shim.css('height', container.height()+'px');
 	}
@@ -65,9 +62,7 @@ $(document).ready(function(){
 	fixPosition();
 	$(window).scroll(function(){ fixPosition() });
 	$(window).resize(function(){ fixPosition(); });
-  
-  // set trigger point
-  // i.e. how far down viewport is the "eye line"
+
 	var triggerPoint = 0;
 	function setTriggerPoint(){
 		triggerPoint = $(window).height() * .18;
